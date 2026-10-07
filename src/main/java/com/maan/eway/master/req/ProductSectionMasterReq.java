@@ -1,0 +1,73 @@
+package com.maan.eway.master.req;
+
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Data;
+
+@Data
+public class ProductSectionMasterReq {
+
+    @JsonProperty("ProductId")
+    private String    productId    ;
+  
+	@JsonProperty("SectionId")
+    private String    sectionId    ;
+
+	@JsonProperty("InsuranceId")
+	private String insuranceId;
+
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	@JsonProperty("EffectiveDateStart")
+	private Date effectiveDateStart;
+	
+	/*
+	 * @JsonFormat(pattern = "dd/MM/yyyy")
+	 * 
+	 * @JsonProperty("EffectiveDateEnd") private Date effectiveDateEnd;
+	 */
+
+	@JsonProperty("SectionName")
+	private String sectionName;
+
+	@JsonProperty("Status")
+	private String status;
+	
+	@JsonProperty("MotorYn")
+	private String motorYn;
+	
+	@JsonProperty("CoreAppCode")
+	private String coreAppCode;
+
+	@JsonProperty("Remarks")
+	private String remarks;
+	
+	@JsonProperty("CreatedBy")
+	private String createdBy;
+	
+	@JsonProperty("RegulatoryCode")
+	private String regulatoryCode;
+	
+	@JsonProperty("MinimumPremium")
+	private String minimumPremium;
+	
+	@JsonProperty("CodeDescLocal")
+	private String codeDescLocal;
+	
+	@JsonProperty("BranchCode")
+	private String branchCode;
+	
+	@JsonProperty("FilePathOriginal")
+	private String filePathOriginal;
+	
+	@JsonProperty("FileName")
+	private String fileName;
+	
+	@JsonProperty("FilePathBackup")
+	private String filePathBackup;
+	
+	@JsonProperty("OriginalFileName")
+	private String originalFileName;
+}
